@@ -1,0 +1,127 @@
+<title>Gabarito de Hibridização</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#eef1ef; --card:#ffffff; --ink:#131c19; --mut:#5d6b66;
+  --line:#d3ddd8; --line2:#e6ece9; --acc:#0e6a51; --acc-soft:#e2efe9;
+  --flag:#8a5a12; --flag-bg:#fbf1de;
+  --shadow:0 1px 2px rgba(19,28,25,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0e1412; --card:#161f1c; --ink:#e2eae6; --mut:#93a49e;
+    --line:#28352f; --line2:#1f2b27; --acc:#5ac9a1; --acc-soft:#14312a;
+    --flag:#e0b168; --flag-bg:#2a2213; --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0e1412; --card:#161f1c; --ink:#e2eae6; --mut:#93a49e;
+  --line:#28352f; --line2:#1f2b27; --acc:#5ac9a1; --acc-soft:#14312a;
+  --flag:#e0b168; --flag-bg:#2a2213; --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Source Sans 3",-apple-system,Segoe UI,sans-serif;font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:48px 22px 96px}
+header.top{display:flex;flex-direction:column;gap:10px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--acc)}
+h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(30px,5vw,42px);
+  line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.meta{color:var(--mut);font-size:14.5px;margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px;font-size:13.5px;color:var(--mut)}
+.legend b{color:var(--ink);font-weight:600}
+section{margin-top:52px;display:flex;flex-direction:column;gap:14px}
+.qhead{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--acc);padding-bottom:8px}
+.qnum{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.06em;
+  background:var(--acc-soft);color:var(--acc);padding:4px 8px;border-radius:3px;white-space:nowrap}
+.qhead h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:21px;margin:0;flex:1;text-wrap:balance}
+h3.sub{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:12px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);margin:10px 0 -4px}
+ol.ans{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ol.ans li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:baseline;
+  padding:9px 0;border-bottom:1px solid var(--line2)}
+ol.ans li:last-child{border-bottom:0}
+ol.ans .k{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--acc)}
+.name{font-weight:700;letter-spacing:-.005em}
+.why{display:block;color:var(--mut);font-size:14px;margin-top:2px}
+.f{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:14px;letter-spacing:-.01em}
+.molgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(226px,1fr));gap:12px}
+.mol{margin:0;background:var(--card);border:1px solid var(--line);border-radius:6px;
+  padding:10px 10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center;
+  box-shadow:var(--shadow);color:var(--ink)}
+.mol svg{width:100%;height:auto;max-width:280px;display:block}
+.mol figcaption{font-size:13px;color:var(--mut);text-align:center;line-height:1.35}
+.mol figcaption b{color:var(--ink);font-weight:600}
+.tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:420px}
+th{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:11.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--mut);text-align:left;padding:0 12px 7px;border-bottom:1px solid var(--line)}
+td{padding:9px 12px;border-bottom:1px solid var(--line2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--acc);width:62px}
+.flag{background:var(--flag-bg);border-left:3px solid var(--flag);padding:13px 16px;
+  border-radius:0 5px 5px 0;font-size:14.5px}
+.flag b{color:var(--flag)}
+.tip{color:var(--mut);font-size:14px;margin:0}
+a{color:var(--acc)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">UEM · Química Orgânica · Profa. Dra. Juliana Peixoto</div>
+  <h1>Gabarito de Hibridização</h1>
+  <p class="meta">Lista de exercícios 2 — resolução das 18 questões, com a regra aplicada em cada caso.</p>
+  <div class="legend"><span><b>18</b> questões</span><span><b>sp³ · sp² · sp</b> + orbitais p</span></div>
+</header>
+
+<section><div class="qhead"><span class="qnum">Antes de tudo</span><h2>A regra que resolve quase toda a lista</h2></div>
+<div class="tbl"><table>
+<tr><th>Grupos ao redor do átomo</th><th>Hibridização</th><th>Geometria</th><th>Ângulo</th><th>Orbitais p livres</th></tr>
+<tr><td>4 (ligações σ + pares isolados)</td><td class="name">sp³</td><td>tetraédrica</td><td>109,5°</td><td>0</td></tr>
+<tr><td>3</td><td class="name">sp²</td><td>trigonal plana</td><td>120°</td><td>1</td></tr>
+<tr><td>2</td><td class="name">sp</td><td>linear</td><td>180°</td><td>2</td></tr>
+</table></div>
+<p class="tip"><b>Exceção importante:</b> se o par de elétrons isolado participa de ressonância/aromaticidade, ele <b>não</b> entra na conta — ele ocupa um orbital <b>p</b> puro, e o átomo "desce" de sp³ para sp². É isso que decide as questões 2, 6 e 17.</p>
+</section>
+
+<section><div class="qhead"><span class="qnum">Questão 1</span><h2>Orbitais que se sobrepõem na ligação σ entre os carbonos destacados</h2></div><ol class="ans"><li><span class="k">i</span><span><span class="name">sp² – sp³</span><span class="why">O carbono do H₂C=C é sp²; o CH₂ do etila é sp³.</span></span></li><li><span class="k">ii</span><span><span class="name">sp – sp³</span><span class="why">Carbono interno da tripla (sp) ligado ao CH₂ (sp³).</span></span></li><li><span class="k">iii</span><span><span class="name">sp² – sp</span><span class="why">Carbono do alqueno (sp²) ligado ao primeiro carbono da tripla (sp).</span></span></li></ol></section>
+
+<section><div class="qhead"><span class="qnum">Questão 2</span><h2>Múltipla escolha — orbital do par de elétrons não ligantes</h2></div><p>Alternativa <span class="name">d)</span>.</p><div class="tbl"><table><tr><th>Tipo de nitrogênio</th><th>Como identificar</th><th>Orbital do par</th></tr><tr><td><span class="name">Tipo piridina</span></td><td>N com 2 ligações σ no anel e uma dupla C=N; o par fica no plano do anel</td><td>sp²</td></tr><tr><td><span class="name">Tipo pirrol</span></td><td>N com 3 ligações σ; o par entra no sexteto aromático</td><td>p (não hibridizado)</td></tr></table></div><p class="tip">Por isso: (i) quinolina → sp²; (ii) N-metilindol → p; (iii) N-metilimidazol → um sp² (o =N–) e um p (o N–CH₃); (iv) purina → três sp² e um p (o N–CH₃); (v) pirimidina → os dois sp².</p></section>
+
+<section><div class="qhead"><span class="qnum">Questão 3</span><h2>Hibridização dos átomos indicados</h2></div><ol class="ans"><li><span class="k">A</span><span><span class="name">sp²</span><span class="why">Carbono da ligação dupla C=C (3 grupos ao redor).</span></span></li><li><span class="k">B</span><span><span class="name">sp²</span><span class="why">Oxigênio da carbonila da cetona.</span></span></li><li><span class="k">C</span><span><span class="name">sp³</span><span class="why">Oxigênio do álcool: 2 ligações σ + 2 pares isolados = 4 grupos.</span></span></li></ol></section>
+
+<section><div class="qhead"><span class="qnum">Questão 4</span><h2>Propan-1-ol — hibridização de todos os átomos (exceto H)</h2></div><p>Todos <span class="name">sp³</span>: os três carbonos (cada um com 4 ligações σ) e o oxigênio (2 ligações σ + 2 pares isolados).</p></section>
+
+<section><div class="qhead"><span class="qnum">Questão 5</span><h2>Hibridização dos átomos indicados</h2></div><ol class="ans"><li><span class="k">A</span><span><span class="name">sp</span><span class="why">Nitrogênio da nitrila: 1 ligação σ + 1 par isolado = 2 grupos.</span></span></li><li><span class="k">B</span><span><span class="name">sp²</span><span class="why">Nitrogênio da imina: 2 ligações σ + 1 par isolado = 3 grupos.</span></span></li><li><span class="k">C</span><span><span class="name">sp³</span><span class="why">Oxigênio do éter: 2 ligações σ + 2 pares isolados.</span></span></li></ol></section>
+
+<section><div class="qhead"><span class="qnum">Questão 6</span><h2>Butiramida — nitrogênio nas duas formas de ressonância</h2></div><p><span class="name">sp² nas duas formas.</span></p><p class="tip">Na forma (II) isso é óbvio, porque há uma dupla C=N. Na forma (I) a estrutura "parece" sp³, mas o par do nitrogênio é justamente o que se desloca na ressonância — logo ele precisa estar num orbital <b>p</b> paralelo ao da carbonila, e o nitrogênio é sp². É por isso que o grupo amida é plano.</p></section>
+
+<section><div class="qhead"><span class="qnum">Questão 7</span><h2>Orbital que acomoda o par de elétrons não ligantes</h2></div><ol class="ans"><li><span class="k">i</span><span><span class="name">sp³</span><span class="why">Amina alifática (propan-1-amina): 3 ligações σ + 1 par = 4 grupos.</span></span></li><li><span class="k">ii</span><span><span class="name">sp²</span><span class="why">Nitrogênio de imina: 2 ligações σ + 1 par.</span></span></li><li><span class="k">iii</span><span><span class="name">sp</span><span class="why">Nitrogênio de nitrila: 1 ligação σ + 1 par.</span></span></li></ol></section>
+
+<section><div class="qhead"><span class="qnum">Questão 8</span><h2>1-buteno — contagem de orbitais</h2></div><div class="tbl"><table><tr><th>O que se pede</th><th>Resposta</th></tr><tr><td>Átomos sp²</td><td class="num">2</td></tr><tr><td>Orbitais sp² usados em ligação</td><td class="num">6</td></tr><tr><td>Orbitais p não hibridizados</td><td class="num">2</td></tr></table></div><p class="tip">São sp² apenas os dois carbonos da dupla (C1 e C2). Cada um usa 3 orbitais sp² para as ligações σ (3 × 2 = 6) e guarda 1 orbital p; os dois p se sobrepõem lateralmente e formam a ligação π. C3 e C4 são sp³.</p></section>
+
+<section><div class="qhead"><span class="qnum">Questão 9</span><h2>2,2-dicloropropano — todos os átomos (exceto H)</h2></div><p>Todos <span class="name">sp³</span>: os três carbonos (4 ligações σ cada) e os dois cloros (1 ligação σ + 3 pares isolados = 4 grupos).</p></section>
+
+<section><div class="qhead"><span class="qnum">Questão 10</span><h2>Butano — sobreposição de orbitais e ligações σ</h2></div><p>Os <span class="name">quatro carbonos são sp³</span>, cada um com geometria <b>tetraédrica</b> (109,5°) e quatro lobos sp² — quer dizer, quatro orbitais sp³ apontando para os vértices de um tetraedro. Não há ligação π: o butano tem <span class="name">13 ligações σ</span>.</p><div class="tbl"><table><tr><th>Ligação</th><th>Sobreposição</th><th>Quantas</th></tr><tr><td>C–C</td><td class="f">sp³(C) + sp³(C)</td><td class="num">3</td></tr><tr><td>C–H</td><td class="f">sp³(C) + 1s(H)</td><td class="num">10</td></tr></table></div><p class="tip">Para desenhar: represente cada carbono com quatro lobos sp³ em tetraedro, encoste um lobo de um carbono no lobo do carbono vizinho (ligação σ frontal, ao longo do eixo C–C) e os lobos restantes nos orbitais 1s esféricos dos hidrogênios.</p></section>
+
+<section><div class="qhead"><span class="qnum">Questão 11</span><h2>But-2-ino — hibridização dos carbonos</h2></div><ol class="ans"><li><span class="k">C1</span><span><span class="name">sp³</span><span class="why">CH₃ terminal.</span></span></li><li><span class="k">C2</span><span><span class="name">sp</span><span class="why">Carbono da tripla: 2 grupos ao redor, geometria linear.</span></span></li><li><span class="k">C3</span><span><span class="name">sp</span><span class="why">Carbono da tripla.</span></span></li><li><span class="k">C4</span><span><span class="name">sp³</span><span class="why">CH₃ terminal.</span></span></li></ol></section>
+
+<section><div class="qhead"><span class="qnum">Questão 12</span><h2>3-butenal — todos os átomos (exceto H)</h2></div><ol class="ans"><li><span class="k">C1</span><span><span class="name">sp²</span><span class="why">Carbono da carbonila (CHO).</span></span></li><li><span class="k">O</span><span><span class="name">sp²</span><span class="why">Oxigênio da carbonila.</span></span></li><li><span class="k">C2</span><span><span class="name">sp³</span><span class="why">CH₂ entre a carbonila e a dupla.</span></span></li><li><span class="k">C3</span><span><span class="name">sp²</span><span class="why">Carbono da ligação dupla C=C.</span></span></li><li><span class="k">C4</span><span><span class="name">sp²</span><span class="why">CH₂ terminal da dupla.</span></span></li></ol></section>
+
+<section><div class="qhead"><span class="qnum">Questão 13</span><h2>Por que a ligação σ N–H é maior na metanamina</h2></div><p>Porque o nitrogênio muda de hibridização — e com ela muda o <span class="name">caráter s</span> do orbital que forma a ligação.</p><div class="tbl"><table><tr><th>Composto</th><th>N</th><th>Caráter s</th><th>Ligação N–H</th></tr><tr><td>Metanamina (CH₃NH₂)</td><td class="name">sp³</td><td>25 %</td><td>mais longa e mais fraca</td></tr><tr><td>Metanimina (CH₂=NH)</td><td class="name">sp²</td><td>33 %</td><td>mais curta e mais forte</td></tr></table></div><p class="tip">O orbital s é esférico e fica mais próximo do núcleo que o p. Quanto maior a fração de s no orbital híbrido, mais perto do núcleo fica o par de elétrons da ligação — e menor o comprimento da ligação. Como sp² tem mais caráter s que sp³, o N–H da metanimina é mais curto; logo, o da metanamina é maior.</p></section>
+
+<section><div class="qhead"><span class="qnum">Questão 14</span><h2>3-fenil-1-metilpiperidina-3-carbaldeído — C, N e O</h2></div><div class="tbl"><table><tr><th>Átomo</th><th>Hibridização</th><th>Por quê</th></tr><tr><td>6 carbonos do anel benzênico</td><td class="name">sp²</td><td>anel aromático, 3 grupos em cada carbono</td></tr><tr><td>Carbono do CHO</td><td class="name">sp²</td><td>carbonila</td></tr><tr><td>Oxigênio do CHO</td><td class="name">sp²</td><td>oxigênio da carbonila</td></tr><tr><td>Carbono quaternário do anel</td><td class="name">sp³</td><td>4 ligações σ</td></tr><tr><td>CH₂ do anel piperidínico</td><td class="name">sp³</td><td>4 ligações σ</td></tr><tr><td>Nitrogênio da piperidina</td><td class="name">sp³</td><td>3 ligações σ + 1 par isolado; o anel não é aromático, o par não entra em ressonância</td></tr><tr><td>CH₃ ligado ao N</td><td class="name">sp³</td><td>4 ligações σ</td></tr></table></div></section>
+
+<section><div class="qhead"><span class="qnum">Questão 15</span><h2>1-penteno — hibridização de cada carbono</h2></div><ol class="ans"><li><span class="k">C1</span><span><span class="name">sp³</span><span class="why">CH₃.</span></span></li><li><span class="k">C2</span><span><span class="name">sp³</span><span class="why">CH₂.</span></span></li><li><span class="k">C3</span><span><span class="name">sp³</span><span class="why">CH₂.</span></span></li><li><span class="k">C4</span><span><span class="name">sp²</span><span class="why">Carbono da dupla.</span></span></li><li><span class="k">C5</span><span><span class="name">sp²</span><span class="why">CH₂ terminal da dupla.</span></span></li></ol></section>
+
+<section><div class="qhead"><span class="qnum">Questão 16</span><h2>Hibridizações e geometrias dos átomos destacados</h2></div><div class="tbl"><table><tr><th>Átomo</th><th>Hibridização</th><th>Geometria</th></tr><tr><td>(I) carbono do anel que leva o OH (está na dupla)</td><td class="name">sp²</td><td>trigonal plana, 120°</td></tr><tr><td>(II) carbono de junção de anéis, na dupla</td><td class="name">sp²</td><td>trigonal plana, 120°</td></tr><tr><td>(III) carbono CH de junção de anéis</td><td class="name">sp³</td><td>tetraédrica, 109,5°</td></tr><tr><td>(IV) carbono da nitrila</td><td class="name">sp</td><td>linear, 180°</td></tr><tr><td>(V) nitrogênio da nitrila</td><td class="name">sp</td><td>linear</td></tr><tr><td>(VI) oxigênio do OH</td><td class="name">sp³</td><td>angular (~104,5°)</td></tr></table></div></section>
+
+<section><div class="qhead"><span class="qnum">Questão 17</span><h2>Serotonina — orbitais dos pares não compartilhados</h2></div><div class="tbl"><table><tr><th>Par de elétrons</th><th>Orbital</th><th>Por quê</th></tr><tr><td>NH₂ da cadeia lateral</td><td class="name">sp³</td><td>amina alifática: o par não participa de ressonância</td></tr><tr><td>N–H do anel indólico</td><td class="name">p</td><td>o par faz parte do sexteto aromático (N tipo pirrol); o N é sp²</td></tr><tr><td>O–H do fenol (2 pares)</td><td class="name">p + sp²</td><td>um par é doado por ressonância ao anel → fica num orbital p; o outro permanece num orbital híbrido sp²</td></tr></table></div><div class="flag"><b>Atenção à convenção do curso:</b> muitos livros simplificam o oxigênio do fenol para sp³ (dois pares em orbitais sp³). A resposta acima é a rigorosa, coerente com a regra usada nas questões 2 e 6 desta mesma lista — vale confirmar qual das duas a professora adota.</div></section>
+
+<section><div class="qhead"><span class="qnum">Questão 18</span><h2>Orbitais que formam a ligação entre os carbonos especificados</h2></div><ol class="ans"><li><span class="k">a</span><span><span class="name">sp² – sp²</span><span class="why">CH₃<b>CH</b>=<b>CH</b>CH₂CH₂Cl: os dois carbonos são da dupla. A σ vem da sobreposição frontal sp²–sp²; a π vem dos orbitais p.</span></span></li><li><span class="k">b</span><span><span class="name">sp² – sp³</span><span class="why">H₂C=<b>CH</b>–<b>C</b>F₃: carbono do alqueno (sp²) com o carbono do CF₃ (sp³).</span></span></li><li><span class="k">c</span><span><span class="name">sp – sp²</span><span class="why">H₂C=<b>C</b>=<b>CH</b>NH₂: o carbono central do aleno é sp (linear); o outro é sp².</span></span></li></ol></section>
+</div>
